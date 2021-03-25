@@ -79,7 +79,7 @@ function Airplane(name) {
     this.odometer = 0;
     
   }
-  Car.prototype.fill = () => {this.tank.push()};
+  Car.prototype.fill = () => {let i = Math.floor(Math.random()* 13);this.tank.push(i)};
   
   /*
     TASK 3
