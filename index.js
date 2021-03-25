@@ -45,9 +45,15 @@ function Airplane(name) {
             this.stomach = [];
             this.toString = () => {return `${this.name}, ${this.age}`};
           };
-          Person.prototype.eat = (someFood) => {eat.push(someFood);};
+          Person.prototype.eat = function(someFood){
+            if(this.stomach.length < 10) {
+              this.stomach.push(someFood);
+            }
+          }
           
-          Person.prototype.poop = () => {};
+          Person.prototype.poop = function (){
+            this.stomach = [];
+          }
          
          
      
