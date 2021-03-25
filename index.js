@@ -43,17 +43,13 @@ function Airplane(name) {
             this.name = name;
             this.age = age;
             this.stomach = [];
-            this.eat = function(someFood){
-              this.stomach.push(someFood);
-              this.stomach.forEach(someFood, stomach);
-            };
-            this.poop = function(){
-              someFood.forEach(stomach.length)
-            };
-            this.toString = function(){
-              return `${this.name}, ${this.age}`
-            };
-          }
+            this.toString = () => {return `${this.name}, ${this.age}`};
+          };
+          Person.prototype.eat = (someFood) => {eat.push(someFood);};
+          
+          Person.prototype.poop = () => {};
+         
+         
      
  
  
@@ -83,7 +79,7 @@ function Airplane(name) {
     this.odometer = 0;
     
   }
-  Car.prototype.fill = (gallons) => {gallons.forEach}
+  Car.prototype.fill = () => {this.tank.push()};
   
   /*
     TASK 3
@@ -96,16 +92,21 @@ function Airplane(name) {
    this.name = name;
    this.age = age;
    this.favoriteToy = favoriteToy;
+   this.play = () => {return `Playing with ${this.favoriteToy}, ${this.favoriteToy} being the favorite toy.`};
   }
-  Baby.prototype.play = () => {console.log(`Playing with ${favoriteToy}, ${favoriteToy} being the favorite toy.`)}
+
+  Baby.prototype.play = () => {};
+
+  Baby.prototype = Object.create(Person.prototype);
+  
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. If new is used to call a function 'this' creates a new object in the function.
+    2. If apply, call, or bind are used and 'this' is inside the function. 'this' is the object that is being called. 
+    3. If a function is called with out call, bind, apply, or new. If 'this' is the browser window.
+    4. this.  what ever is to the left of the '.' is what is being called. 
   */
   
   
