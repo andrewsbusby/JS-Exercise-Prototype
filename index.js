@@ -54,12 +54,6 @@ function Airplane(name) {
           Person.prototype.poop = function (){
             this.stomach = [];
           }
-         
-         
-     
- 
- 
-
   
   
   
@@ -85,7 +79,9 @@ function Airplane(name) {
     this.odometer = 0;
     
   }
-  Car.prototype.fill = () => {let i = Math.floor(Math.random()* 13);this.tank.push(i)};
+  Car.prototype.fill = function(){
+    this.tank.push();
+  }
   
   /*
     TASK 3
